@@ -6,7 +6,11 @@ ja:
   contentDir: content/ja
   title: 画像情報研究室
   params:
-    description: 筑波大学 画像情報研究室 (Computer Vision and Image Media Lab.)。コンピュータビジョン、複合現実感、自由視点映像、映像認識理解などを研究しています。
+    hugoblox:
+      identity:
+        name: 画像情報研究室
+        tagline: Computer Vision and Image Media Lab. — 筑波大学
+        description: 筑波大学 画像情報研究室。コンピュータビジョン、複合現実感、自由視点映像、映像認識理解などを研究しています。
 
 en:
   languageName: English
@@ -15,4 +19,8 @@ en:
   contentDir: content/en
   title: Computer Vision and Image Media Lab.
   params:
-    description: Computer Vision and Image Media Lab. at the University of Tsukuba — computer vision, mixed reality, free-viewpoint video, and video understanding.
+    hugoblox:
+      identity:
+        name: Computer Vision and Image Media Lab.
+        tagline: University of Tsukuba
+        description: Computer Vision and Image Media Lab. at the University of Tsukuba — computer vision, mixed reality, free-viewpoint video, and video understanding.
