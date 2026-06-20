@@ -1,27 +1,19 @@
-# Decap CMS configuration
-# Docs: https://decapcms.org/docs/
+# Decap CMS configuration — https://decapcms.org/docs/
 #
-# 編集対象は GitHub リポジトリ。保存すると main に commit され、自動でデプロイされます。
-# - ローカル編集（OAuth不要・すぐ使える）: 別ターミナルで `npx decap-server` を起動し、
-#   さらに `hugo server` を起動して http://localhost:1313/admin/ を開く（local_backend が有効なため）。
-# - 本番（https://cvim-tsukuba.github.io/admin/ でログイン）: GitHub OAuth プロバイダが必要。
-#   下の backend.base_url にプロバイダURLを設定してください（CMS-SETUP.md 参照）。
+# ローカル編集（OAuth不要）: 別ターミナルで `npx decap-server` を起動し、`hugo server` も起動して
+#   http://localhost:1313/admin/ を開く（local_backend 有効）。
+# 本番（リモート編集）: GitHub OAuth プロバイダが必要。backend.base_url を設定（CMS-SETUP.md 参照）。
 
 backend:
   name: github
   repo: CVIM-Tsukuba/cvim-tsukuba.github.io
   branch: main
-  # 本番のリモート編集に必要（例: Cloudflare Worker の OAuth プロキシ）。
   # base_url: https://<your-oauth-provider-host>
 
-# ローカル編集を許可（`npx decap-server` 使用時）。本番のみにしたい場合は false に。
 local_backend: true
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
-
-# 既定の保存方式は「直接 main へ commit」。レビュー（PR）運用にしたい場合は次行を有効化:
-# publish_mode: editorial_workflow
 
 collections:
   # ───────── ニュース / News ─────────
@@ -56,6 +48,39 @@ collections:
       - { name: date, label: "Date", widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
       - { name: draft, label: "Draft", widget: boolean, default: false, required: false }
       - { name: body, label: "Body", widget: markdown }
+
+  # ───────── メンバー（データ管理：写真付き） ─────────
+  - name: members_data
+    label: "メンバー / Members"
+    editor: { preview: false }
+    files:
+      - name: members
+        label: "メンバー一覧（写真・氏名・役職）"
+        file: "data/members.yaml"
+        media_folder: "static/img/members"
+        public_folder: "/img/members"
+        fields:
+          - name: groups
+            label: "グループ（教員・学年など）"
+            label_singular: "グループ"
+            widget: list
+            summary: "{{fields.label_ja}} / {{fields.label_en}}"
+            fields:
+              - { name: label_ja, label: "見出し（日本語）", widget: string }
+              - { name: label_en, label: "見出し（English）", widget: string }
+              - name: members
+                label: "メンバー"
+                label_singular: "メンバー"
+                widget: list
+                summary: "{{fields.name}} {{fields.romaji}}"
+                fields:
+                  - { name: name, label: "氏名（漢字）", widget: string }
+                  - { name: romaji, label: "ローマ字", widget: string, required: false }
+                  - { name: role_ja, label: "役職（日本語・教員のみ）", widget: string, required: false }
+                  - { name: role_en, label: "役職（English・教員のみ）", widget: string, required: false }
+                  - { name: affiliation, label: "所属（EMP / IMIS / IIT など）", widget: string, required: false }
+                  - { name: link, label: "個人ページURL", widget: string, required: false }
+                  - { name: photo, label: "写真（空ならプレースホルダー）", widget: image, required: false, choose_url: false }
 
   # ───────── 研究テーマ / Research Topics ─────────
   - name: research_ja
@@ -124,13 +149,6 @@ collections:
           - { name: title, label: "タイトル", widget: string }
           - { name: description, label: "説明(SEO)", widget: string, required: false }
           - { name: body, label: "本文", widget: markdown }
-      - name: members
-        label: "メンバー（※HTMLカード）"
-        file: "content/ja/members.md"
-        fields:
-          - { name: title, label: "タイトル", widget: string }
-          - { name: description, label: "説明(SEO)", widget: string, required: false }
-          - { name: body, label: "本文（HTMLを含む・コード表示推奨）", widget: markdown }
       - name: access
         label: "アクセス（※地図HTML）"
         file: "content/ja/access.md"
@@ -179,13 +197,6 @@ collections:
           - { name: title, label: "Title", widget: string }
           - { name: description, label: "Description (SEO)", widget: string, required: false }
           - { name: body, label: "Body", widget: markdown }
-      - name: members
-        label: "Members (HTML cards)"
-        file: "content/en/members.md"
-        fields:
-          - { name: title, label: "Title", widget: string }
-          - { name: description, label: "Description (SEO)", widget: string, required: false }
-          - { name: body, label: "Body (contains HTML)", widget: markdown }
       - name: access
         label: "Access (map HTML)"
         file: "content/en/access.md"

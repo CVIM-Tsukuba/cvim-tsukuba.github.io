@@ -1,0 +1,15 @@
+{{- /* Render lab members from data/members.yaml as avatar cards, grouped, bilingual labels. */ -}}
+{{- $lang := .Page.Language.Lang -}}
+{{- with site.Data.members.groups -}}
+{{- range . -}}
+{{- $label := cond (eq $lang "en") .label_en .label_ja -}}
+<h3>{{ $label }}</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1.1rem;margin:1rem 0 1.8rem;">
+{{- range .members -}}
+{{- $meta := cond (eq $lang "en") (.role_en | default .affiliation) (.role_ja | default .affiliation) -}}
+{{- $photo := .photo | default "/img/avatar-placeholder.svg" -}}
+<figure style="margin:0;text-align:center;"><img src="{{ $photo }}" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">{{ if .link }}<a href="{{ .link }}" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(125,125,125,.4);">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</span>{{ with .romaji }}<span style="display:block;font-size:.76em;opacity:.7;">{{ . }}</span>{{ end }}{{ with $meta }}<span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">{{ . }}</span>{{ end }}</figcaption></figure>
+{{- end -}}
+</div>
+{{- end -}}
+{{- end -}}
