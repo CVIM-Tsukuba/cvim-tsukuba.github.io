@@ -1,6 +1,7 @@
 ---
 title: "研究テーマ"
 description: "画像情報研究室の研究テーマ"
+show_read_time: false
 cascade:
   showEdit: false
   showDate: false

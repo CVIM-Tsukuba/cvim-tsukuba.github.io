@@ -4,6 +4,9 @@
 # Tutorial: https://docs.hugoblox.com/tutorial/
 # Documentation: https://docs.hugoblox.com/
 # ══════════════════════════════════════════════════════════════════════════════
+# Disable the author profile box shown at the bottom of section articles (news, projects, ...)
+profile: false
+
 hugoblox:
   schema: "2.0"
 

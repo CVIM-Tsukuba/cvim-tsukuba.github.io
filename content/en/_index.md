@@ -30,6 +30,8 @@ sections:
     design:
       view: article-grid
       columns: 3
+      show_date: false
+      show_read_time: false
 
   - block: collection
     id: news
@@ -43,4 +45,5 @@ sections:
       order: desc
     design:
       view: card
+      show_read_time: false
 ---

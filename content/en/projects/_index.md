@@ -1,6 +1,7 @@
 ---
 title: "Research Topics"
 description: "Research topics of the Computer Vision and Image Media Lab."
+show_read_time: false
 cascade:
   showEdit: false
   showDate: false
