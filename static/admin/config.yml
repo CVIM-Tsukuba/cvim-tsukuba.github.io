@@ -1,0 +1,195 @@
+# Decap CMS configuration
+# Docs: https://decapcms.org/docs/
+#
+# 編集対象は GitHub リポジトリ。保存すると main に commit され、自動でデプロイされます。
+# - ローカル編集（OAuth不要・すぐ使える）: 別ターミナルで `npx decap-server` を起動し、
+#   さらに `hugo server` を起動して http://localhost:1313/admin/ を開く（local_backend が有効なため）。
+# - 本番（https://cvim-tsukuba.github.io/admin/ でログイン）: GitHub OAuth プロバイダが必要。
+#   下の backend.base_url にプロバイダURLを設定してください（CMS-SETUP.md 参照）。
+
+backend:
+  name: github
+  repo: CVIM-Tsukuba/cvim-tsukuba.github.io
+  branch: main
+  # 本番のリモート編集に必要（例: Cloudflare Worker の OAuth プロキシ）。
+  # base_url: https://<your-oauth-provider-host>
+
+# ローカル編集を許可（`npx decap-server` 使用時）。本番のみにしたい場合は false に。
+local_backend: true
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+# 既定の保存方式は「直接 main へ commit」。レビュー（PR）運用にしたい場合は次行を有効化:
+# publish_mode: editorial_workflow
+
+collections:
+  # ───────── ニュース / News ─────────
+  - name: news_ja
+    label: "ニュース（日本語）"
+    label_singular: "ニュース記事"
+    folder: "content/ja/news"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: "タイトル", widget: string }
+      - { name: date, label: "日付", widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { name: draft, label: "下書き（非公開）", widget: boolean, default: false, required: false }
+      - { name: body, label: "本文", widget: markdown }
+
+  - name: news_en
+    label: "News (English)"
+    label_singular: "News post"
+    folder: "content/en/news"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: date, label: "Date", widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { name: draft, label: "Draft", widget: boolean, default: false, required: false }
+      - { name: body, label: "Body", widget: markdown }
+
+  # ───────── 研究テーマ / Research Topics ─────────
+  - name: research_ja
+    label: "研究テーマ（日本語）"
+    label_singular: "研究テーマ"
+    folder: "content/ja/projects"
+    path: "{{slug}}/index"
+    filter: { field: title, exists: true }
+    create: true
+    fields:
+      - { name: title, label: "タイトル", widget: string }
+      - { name: weight, label: "並び順（小さいほど先）", widget: number, required: false }
+      - { name: summary, label: "概要（カード用）", widget: text, required: false }
+      - { name: body, label: "本文", widget: markdown }
+
+  - name: research_en
+    label: "Research Topics (English)"
+    label_singular: "Research topic"
+    folder: "content/en/projects"
+    path: "{{slug}}/index"
+    filter: { field: title, exists: true }
+    create: true
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: weight, label: "Order", widget: number, required: false }
+      - { name: summary, label: "Summary", widget: text, required: false }
+      - { name: body, label: "Body", widget: markdown }
+
+  # ───────── 固定ページ / Pages（日本語） ─────────
+  - name: pages_ja
+    label: "ページ（日本語）"
+    editor: { preview: false }
+    files:
+      - name: awards
+        label: "受賞"
+        file: "content/ja/awards.md"
+        fields:
+          - { name: title, label: "タイトル", widget: string }
+          - { name: description, label: "説明(SEO)", widget: string, required: false }
+          - { name: body, label: "本文", widget: markdown }
+      - name: links
+        label: "リンク"
+        file: "content/ja/links.md"
+        fields:
+          - { name: title, label: "タイトル", widget: string }
+          - { name: description, label: "説明(SEO)", widget: string, required: false }
+          - { name: body, label: "本文", widget: markdown }
+      - name: join
+        label: "入室希望の方へ"
+        file: "content/ja/join.md"
+        fields:
+          - { name: title, label: "タイトル", widget: string }
+          - { name: description, label: "説明(SEO)", widget: string, required: false }
+          - { name: body, label: "本文", widget: markdown }
+      - name: videos
+        label: "映像集（YouTube）"
+        file: "content/ja/videos.md"
+        fields:
+          - { name: title, label: "タイトル", widget: string }
+          - { name: description, label: "説明(SEO)", widget: string, required: false }
+          - { name: body, label: "本文", widget: markdown }
+      - name: obog
+        label: "OB・OG（名簿）"
+        file: "content/ja/obog.md"
+        fields:
+          - { name: title, label: "タイトル", widget: string }
+          - { name: description, label: "説明(SEO)", widget: string, required: false }
+          - { name: body, label: "本文", widget: markdown }
+      - name: members
+        label: "メンバー（※HTMLカード）"
+        file: "content/ja/members.md"
+        fields:
+          - { name: title, label: "タイトル", widget: string }
+          - { name: description, label: "説明(SEO)", widget: string, required: false }
+          - { name: body, label: "本文（HTMLを含む・コード表示推奨）", widget: markdown }
+      - name: access
+        label: "アクセス（※地図HTML）"
+        file: "content/ja/access.md"
+        fields:
+          - { name: title, label: "タイトル", widget: string }
+          - { name: description, label: "説明(SEO)", widget: string, required: false }
+          - { name: body, label: "本文（地図iframeを含む）", widget: markdown }
+
+  # ───────── Pages (English) ─────────
+  - name: pages_en
+    label: "Pages (English)"
+    editor: { preview: false }
+    files:
+      - name: awards
+        label: "Awards"
+        file: "content/en/awards.md"
+        fields:
+          - { name: title, label: "Title", widget: string }
+          - { name: description, label: "Description (SEO)", widget: string, required: false }
+          - { name: body, label: "Body", widget: markdown }
+      - name: links
+        label: "Links"
+        file: "content/en/links.md"
+        fields:
+          - { name: title, label: "Title", widget: string }
+          - { name: description, label: "Description (SEO)", widget: string, required: false }
+          - { name: body, label: "Body", widget: markdown }
+      - name: join
+        label: "Join Us"
+        file: "content/en/join.md"
+        fields:
+          - { name: title, label: "Title", widget: string }
+          - { name: description, label: "Description (SEO)", widget: string, required: false }
+          - { name: body, label: "Body", widget: markdown }
+      - name: videos
+        label: "Videos"
+        file: "content/en/videos.md"
+        fields:
+          - { name: title, label: "Title", widget: string }
+          - { name: description, label: "Description (SEO)", widget: string, required: false }
+          - { name: body, label: "Body", widget: markdown }
+      - name: obog
+        label: "Alumni"
+        file: "content/en/obog.md"
+        fields:
+          - { name: title, label: "Title", widget: string }
+          - { name: description, label: "Description (SEO)", widget: string, required: false }
+          - { name: body, label: "Body", widget: markdown }
+      - name: members
+        label: "Members (HTML cards)"
+        file: "content/en/members.md"
+        fields:
+          - { name: title, label: "Title", widget: string }
+          - { name: description, label: "Description (SEO)", widget: string, required: false }
+          - { name: body, label: "Body (contains HTML)", widget: markdown }
+      - name: access
+        label: "Access (map HTML)"
+        file: "content/en/access.md"
+        fields:
+          - { name: title, label: "Title", widget: string }
+          - { name: description, label: "Description (SEO)", widget: string, required: false }
+          - { name: body, label: "Body (contains map iframes)", widget: markdown }
