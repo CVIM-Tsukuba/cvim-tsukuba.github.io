@@ -1,0 +1,46 @@
+main:
+  - name: Home
+    url: /en/
+    weight: 10
+  - name: Research
+    identifier: research
+    weight: 20
+  - name: Research Topics
+    parent: research
+    pageRef: /projects/
+    weight: 21
+  - name: Videos
+    parent: research
+    pageRef: /videos/
+    weight: 22
+  - name: Publications
+    pageRef: /publications/
+    weight: 30
+  - name: People
+    identifier: people
+    weight: 40
+  - name: Members
+    parent: people
+    pageRef: /members/
+    weight: 41
+  - name: Alumni
+    parent: people
+    pageRef: /obog/
+    weight: 42
+  - name: News
+    pageRef: /news/
+    weight: 50
+  - name: Join Us
+    pageRef: /join/
+    weight: 60
+  - name: Access
+    pageRef: /access/
+    weight: 70
+
+footer:
+  - name: Awards
+    pageRef: /awards/
+    weight: 10
+  - name: Links
+    pageRef: /links/
+    weight: 20

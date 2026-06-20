@@ -1,0 +1,46 @@
+main:
+  - name: ホーム
+    url: /
+    weight: 10
+  - name: 研究
+    identifier: research
+    weight: 20
+  - name: 研究テーマ
+    parent: research
+    pageRef: /projects/
+    weight: 21
+  - name: 映像集
+    parent: research
+    pageRef: /videos/
+    weight: 22
+  - name: 論文
+    pageRef: /publications/
+    weight: 30
+  - name: メンバー
+    identifier: people
+    weight: 40
+  - name: メンバー
+    parent: people
+    pageRef: /members/
+    weight: 41
+  - name: OB・OG
+    parent: people
+    pageRef: /obog/
+    weight: 42
+  - name: ニュース
+    pageRef: /news/
+    weight: 50
+  - name: 入室希望の方へ
+    pageRef: /join/
+    weight: 60
+  - name: アクセス
+    pageRef: /access/
+    weight: 70
+
+footer:
+  - name: 受賞
+    pageRef: /awards/
+    weight: 10
+  - name: リンク
+    pageRef: /links/
+    weight: 20
