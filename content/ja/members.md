@@ -17,24 +17,28 @@ description: "画像情報研究室のメンバー（2026年度）"
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;"><a href="https://trios.tsukuba.ac.jp/researcher/0000004618" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(125,125,125,.4);">塚田 正人</a></span><span style="display:block;font-size:.76em;opacity:.7;">Masato TSUKADA</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">教授</span></figcaption></figure>
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;"><a href="https://sites.google.com/view/chun-xie/" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(125,125,125,.4);">謝 淳</a></span><span style="display:block;font-size:.76em;opacity:.7;">Chun XIE</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">助教</span></figcaption></figure>
 </div>
+
 ### 研究員
 
 
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1.1rem;margin:1.1rem 0 1.8rem;">
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;"><a href="https://chenkaixusan.github.io/blog/about.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(125,125,125,.4);">陳 凱旭</a></span><span style="display:block;font-size:.76em;opacity:.7;">Kaixu CHEN</span></figcaption></figure>
 </div>
+
 ### 秘書
 
 
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1.1rem;margin:1.1rem 0 1.8rem;">
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">日野原 佳世</span><span style="display:block;font-size:.76em;opacity:.7;">Kayo HINOHARA</span></figcaption></figure>
 </div>
+
 ### 技術職員
 
 
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1.1rem;margin:1.1rem 0 1.8rem;">
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">宮川 寛子</span><span style="display:block;font-size:.76em;opacity:.7;">Hiroko MIYAKAWA</span></figcaption></figure>
 </div>
+
 ## 学生
 
 
@@ -46,6 +50,7 @@ description: "画像情報研究室のメンバー（2026年度）"
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">石井 智也</span><span style="display:block;font-size:.76em;opacity:.7;">Tomoya ISHII</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">EMP</span></figcaption></figure>
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">永井 隆昌</span><span style="display:block;font-size:.76em;opacity:.7;">Takasuke NAGAI</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">IMIS</span></figcaption></figure>
 </div>
+
 ### 博士後期課程２年（D2）
 
 
@@ -55,6 +60,7 @@ description: "画像情報研究室のメンバー（2026年度）"
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">多田 遥香</span><span style="display:block;font-size:.76em;opacity:.7;">Haruka TADA</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">EMP</span></figcaption></figure>
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">汪 慶玉</span><span style="display:block;font-size:.76em;opacity:.7;">Qingyu WANG</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">IMIS</span></figcaption></figure>
 </div>
+
 ### 博士後期課程１年（D1）
 
 
@@ -67,6 +73,7 @@ description: "画像情報研究室のメンバー（2026年度）"
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">粟井 修司</span><span style="display:block;font-size:.76em;opacity:.7;">Shuji Awai</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">IMIS</span></figcaption></figure>
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">杜　盈吟</span><span style="display:block;font-size:.76em;opacity:.7;">DU Yingyin</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">IMIS</span></figcaption></figure>
 </div>
+
 ### 博士前期課程２年（M2）
 
 
@@ -91,6 +98,7 @@ description: "画像情報研究室のメンバー（2026年度）"
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">佐藤 英介</span><span style="display:block;font-size:.76em;opacity:.7;">Eisuke SATO</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">IMIS</span></figcaption></figure>
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">鄧 克尋</span><span style="display:block;font-size:.76em;opacity:.7;">Deng KEXUN</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">IMIS</span></figcaption></figure>
 </div>
+
 ### 博士前期課程１年（M1）
 
 
@@ -113,6 +121,7 @@ description: "画像情報研究室のメンバー（2026年度）"
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">田村 陵真</span><span style="display:block;font-size:.76em;opacity:.7;">Ryoma Tamura</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">IMIS</span></figcaption></figure>
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">唐 檸暁</span><span style="display:block;font-size:.76em;opacity:.7;">Ningxiao Tang</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">IMIS</span></figcaption></figure>
 </div>
+
 ### 学類生（B4）
 
 
@@ -126,6 +135,7 @@ description: "画像情報研究室のメンバー（2026年度）"
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">亀谷旺生</span><span style="display:block;font-size:.76em;opacity:.7;">Ouki Kametani</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">IIT</span></figcaption></figure>
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">Chong Shao</span><span style="display:block;font-size:.72em;opacity:.55;margin-top:.12rem;">B3</span></figcaption></figure>
 </div>
+
 ### 研究生
 
 
@@ -134,6 +144,7 @@ description: "画像情報研究室のメンバー（2026年度）"
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">Katry Ali</span></figcaption></figure>
 <figure style="margin:0;text-align:center;"><img src="/img/avatar-placeholder.svg" alt="" loading="lazy" style="width:84px;height:84px;border-radius:50%;background:rgba(125,125,125,.15);object-fit:cover;display:inline-block;"><figcaption style="margin-top:.45rem;line-height:1.3;"><span style="display:block;font-weight:600;font-size:.92em;">Vanessa Maeder</span></figcaption></figure>
 </div>
+
 ---
 
 略称（プログラム・所属）:
